@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Stresser</title>
+    <link rel="stylesheet" href="ip.css">
+</head>
+<body>
+
+
+    
+    <!-- Main Content -->
+    <header>
+        <h1>IP Stresser</h1>
+    </header>
+
+    <div class="container">
+        <div class="card layer4">
+            <h2>Layer 4 (IPv4)</h2>
+            <input type="text" class="input-box" placeholder="IPs/Subnets (ex: 1.2.3.4, 200.0.0.0/24)">
+            <input type="text" class="input-box" placeholder="Port">
+            <div class="checkbox-container">
+                <input type="checkbox" id="cidr">
+                <label for="cidr">Set Target IP as CIDR (0/24)</label>
+            </div>
+            <select class="dropdown">
+                <option>Hold * - Vip</option>
+                <option>GUDP * - Vip</option>
+                <option>TCP (free)</option>
+                <option>NFO (free)</option>
+                <option>OVHUDP * - basic network (only)</option>
+                <option>Ovh-tcp * - basic network (only)</option>
+                <option>SOCKET * - basic network (only)</option>
+                <option>FIVEM * - basic network (only)</option>
+                <option>FIVEM-Ovh * - basic network (only)</option>
+                <option>Game-udp * - basic network (only)</option>
+                <option>Game-mc * - basic network (only)</option>
+                <option>Game-wz * - basic network (only)</option>
+                <option>Game-gmod * - basic network (only)</option>
+                <option>VSE - (free)</option>
+                <option>Game Fortnite * - basic network (only)</option>
+                <option>TFO * - basic network (only)</option>
+                <option>Con-spam * - basic network (only)</option>
+            </select>
+            <input type="number" class="input-box" placeholder="Attack Duration">
+            <input type="range" class="slider" min="1" max="100" value="50">
+            <div class="button-container">
+                <button class="btn">Send Layer 4 Attack</button>
+                <button class="btn">Schedule Layer 4 Attack (Automatic Attacks)</button>
+            </div>
+            <div class="countdown" id="layer4-countdown">00:00</div>
+        </div>
+
+        <div class="card layer7">
+            <h2>Layer 7 (URLs)</h2>
+            <input type="text" class="input-box" placeholder="URL">
+            <select class="dropdown">
+                <option>Https * - vip</option>
+                <option>RAPIDRESET* - vip</option>
+                <option>rapidrst * - basic network (only)</option>
+                <option>Browser- * - vip</option>
+                <option>Http2 * - basic network (only)</option>
+                <option>Http1 * - basic network (only)</option>
+                <option>Cookie * vip</option>
+                <option>Tls - free</option>
+                <option>SKTFAST - free</option>
+                <option>HTTPRAW- free</option>
+            </select>
+            <input type="number" class="input-box" placeholder="Attack Duration">
+            <input type="range" class="slider" min="1" max="100" value="50">
+            <div class="button-container">
+                <button class="btn">Send Layer 7 Attack</button>
+                <button class="btn">Schedule Layer 7 Attack (Automatic Attacks)</button>
+            </div>
+            <div class="countdown" id="layer7-countdown">00:00</div>
+        </div>
+    </div>
+
+    <div class="home-btn-container">
+        <button class="home-btn" onclick="window.location.href='index.html'">Home</button>
+    </div>
+
+    <script src="ip.js"></script>
+</body>
+</html>
